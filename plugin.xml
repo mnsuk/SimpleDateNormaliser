@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.dltj.jfst.stringNormalizer">
+      <normalizer
+            class="com.mnsuk.castudio.dates.SimpleDateNormaliser"
+            name="mnsuk.SimpleDateNormaliser">
+         <description>
+            Returns the specified date as a formatted string. If the date is invalid 01-01-1970 is retruned. The format may be specified as an optional final argument.</description>
+         <arguments
+               maxLength="4"
+               minLength="3">
+               <description>
+                  First of three mandatory arguments is the year, second is the month, and the third is the day. An optional fourth is any valid Java8 DateTimeFormatter pattern to be used to format the return string (defaults to&quot;dd-MM-yyyy&quot;). If the argument is an invalid pattern the default is used.</description>
+         </arguments>
+      </normalizer>
+   </extension>
+
+</plugin>
